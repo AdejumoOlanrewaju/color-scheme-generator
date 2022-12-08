@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0"/>
+    <meta http-equiv="X-UA-Compatible" content = "ie=edge"/>
+    <title>Color Scheme Generator</title>
+    <link rel = "stylesheet" href = "style.css"/>
+    <script defer src = "index.js"></script>
+  </head>
+  <body>
+    <div class = container>
+      <div class = "progress-bar"></div>
+      <header>
+        <form>
+       
+          <input type = "color" class = "inputcolor"/>
+              <select name = "color-scheme-mode"  class = "mode">
+                <option value = "Monochrome">Monochrome</option>
+                <option value = "Monochrome-dark">Monochrome-dark</option>
+                <option value = "Monochrome-light">Monochrome-light</option>
+                <option value = "Analogic">Analogic</option>
+                <option value = "Complement">Complement</option>
+                <option value = "Analogic-Complement">Analogic-Complement</option>
+                <option value = "Triad">Triad</option>
+                <option value = "Quad">Quad</option>
+              </select>
+            <button class = "btn" onclick = "handleClick(event)">Get color scheme</button>
+            <p class = "error-text" id = "error-text" style = "color : red;"></p>
+        
+          </form>
+
+      </header>
+      <main class = "main">
+        <div class = "col-parent">
+          <div class = "col-child one">
+          
+          </div>
+          <p class = "col-text">#5f5af5</p>
+        </div>
+        
+        <div class = "col-parent">
+          <div class = "col-child two">
+          
+          </div>
+          <p class = "col-text">#2B283A</p>
+        </div>
+
+        <div class = "col-parent">
+          <div class = "col-child three">
+          
+          </div>
+          <p class = "col-text">#613591</p>
+        </div>
+
+        <div class = "col-parent">
+          <div class = "col-child four">
+          
+          </div>
+          <p class = "col-text">#AAD1B6</p>
+        </div>
+
+        <div class = "col-parent">
+          <div class = "col-child five">
+          
+          </div>
+          <p class = "col-text">#0f6966</p>
+        </div>
+
+        <!-- <dialog id = "modal">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, a deleniti eius iusto quaerat officiis debitis accusamus porro ad omnis odio libero incidunt deserunt reprehenderit cum optio, autem voluptas rem?</p>
+          <button onclick = "CloseModal()">CloseModal</button>
+        </dialog> -->
+      </main>
+
+    </div>
+  
+  </body>
+</html>

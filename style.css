@@ -1,0 +1,170 @@
+*{
+  box-sizing : border-box;
+}
+
+body{
+  margin : 0;
+  padding : 0;
+  background : black;
+} 
+
+.container{
+  max-width : 700px;
+  width : 95%;
+  min-height : 100vh;
+  margin : 20px auto;
+}
+
+.progress-bar{
+  max-width : 700px;
+  width : 100%;
+  height : 24px;
+  border : 1px solid #4d4d4d;
+  border-radius : 20px;
+  position : relative;
+  margin-bottom : 20px;
+  display : none;
+}
+
+.progress-bar::before{
+    content : "";
+    width : 0%;
+    height : 100%;
+    border-radius : 20px;
+    background : linear-gradient(125deg, red, blue);
+    position : absolute;
+    animation : progress 2s linear infinite forwards;
+}
+
+@keyframes progress {
+  100%{
+    width : 100%;
+  }
+}
+
+header{
+  border-radius : 10px
+}
+
+form {
+  display : flex;
+  align-items : center;
+  justify-content : space-around;
+  width : 100%;
+  height : 90px;
+  background : white;
+  padding : 5px;
+  flex-wrap : wrap;
+}
+
+@media(max-width : 350px){
+  form{
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    height : 150px;
+  }
+}
+
+@media(max-width : 540px){
+  form{
+    flex-wrap: nowrap;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    height : 150px;
+  }
+}
+.error-text{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+}
+
+input{
+  width : 51px;
+  height : 34px;
+}
+
+select{
+  width : 95%;
+  max-width : 312px;
+  height : 42px;
+  outline : none;
+  padding : 0 10px;
+  border-radius : 6px;
+  border : 1px solid gray;
+  background : white;
+  cursor : pointer;
+  margin : 5px 5px;
+}
+
+button{
+  width : 123px;
+  height : 42px;
+  border-radius : 4px;
+  background : #ffffff;
+  border : 1px solid gray;
+  cursor : pointer;
+}
+
+.btn{
+  background : #ffffff;
+}
+
+button:active{
+  background : black;
+  color : white;
+}
+
+.col-parent{
+  display : flex;
+  flex-direction : column;
+
+}
+
+.col-child{
+  height : 90%;
+  order : 1
+}
+
+.col-child.one{
+  background : #5f5af5;
+}
+
+
+.col-child.two{
+  background : #2B283A;
+}
+
+
+.col-child.three{
+  background : #613591;
+}
+
+
+.col-child.four{
+  background :#AAD1B6;
+}
+
+.col-child.five{
+  background :#0f6966; 
+}
+
+.col-text{
+  background : white;
+  height : 10%;
+  order : 2;
+  margin : 0;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+}
+main{
+  display : grid;
+  grid-template-columns : repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-rows : 100vh;
+  border : 1px solid #CCCCCC
+}
+
